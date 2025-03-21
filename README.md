@@ -23,7 +23,8 @@ Make : Utilisé pour la gestion de la compilation du projet (via un fichier Make
 
 Clonez ce repository en utilisant la commande suivante :
 
-$ git clone https://github.com/votre-utilisateur/sudoku-solver.git
+$ git clone https://github.com/TomCathelain/sudoku-solver.git
+
 $ cd sudoku-solver
 
 2️⃣ Utilisation de Stack
@@ -74,6 +75,7 @@ Display : Affichage des grilles (lignes, colonnes, chiffres).
 Voici un exemple d'exécution dans la console avec une grille de Sudoku à résoudre :
 
 $ make
+
 $ ./sudokuSolver test/veryDifficultGrid.txt
 
 🤝 Contributions
