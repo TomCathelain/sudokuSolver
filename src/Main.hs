@@ -14,6 +14,8 @@ import System.Exit (exitWith, ExitCode(ExitFailure))
 
 import Parser (parseFile)
 import Solver (solveGrid)
+import GridChecker (verifyGrid)
+import Display (displayGrid)
 
 {-
 --
@@ -44,6 +46,13 @@ main = do
     args <- getArgs
     verifyNumberArgs args
     grid <- parseFile (args !! 0)
-    solveGrid grid
+    verifyGrid grid
+    case solveGrid grid of
+        Nothing -> putStrLn "No solution found for this grid! I'm sorry."
+        Just solvedGrid -> do
+            putStrLn "Original grid:"
+            displayGrid grid
+            putStrLn "\nSolved grid:"
+            displayGrid solvedGrid
     return ()
     

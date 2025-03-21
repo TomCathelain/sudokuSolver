@@ -5,7 +5,7 @@
 -- GridChecker
 -}
 
-module GridChecker (verifyGrid) where
+module GridChecker (verifyGrid, transpose) where
 
 -- Import modules
 
